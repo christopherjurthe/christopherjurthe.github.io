@@ -18,7 +18,7 @@ function Keybox(props) {
         playSound(refAudio);
     }
     return (
-        <div onClick={playSound(refAudio)} className={isPressed ? 'keybox keybox--isPressed' : 'keybox'}>
+        <div className={isPressed ? 'keybox keybox--isPressed' : 'keybox'}>
             <div className="keybox_label">
                 <span>{label}</span>
             </div>
