@@ -21,7 +21,14 @@ Syntax highlighted code block
 
 ## What are Hooks
 
+### Essentials
+- Only functional Components
+- Same order on each rendering
+
 ## Differences
+- useState
+- useEffect
+- useRef
 
 ## Example Project
 
