@@ -1,22 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import Keybox from '../Keybox/Keybox';
 
-import kickDeep from '../../assets/drums/kick-deep.wav';
-import kickLow from '../../assets/drums/1.wav';
+import clap from '../../assets/drums/clap-fat.wav';
+import crash from '../../assets/drums/crash-808.wav';
+import kick from '../../assets/drums/kick-808.wav';
+import kick2 from '../../assets/drums/kick-stomp.wav';
+import hihat from '../../assets/drums/hihat-808.wav';
+import openhat from '../../assets/drums/openhat-808.wav';
+import perc from '../../assets/drums/perc-metal.wav';
+import snare from '../../assets/drums/snar-808.wav';
+import tom from '../../assets/drums/tom-808.wav';
 
 function Band() {
     const [keyPressed, setKeyPressed] = useState('');
 
     const drumsMapping = [
-        { key: 'a', sound: kickDeep, label: 'A' },
-        { key: 's', sound: kickLow, label: 'S' },
-        { key: 'd', sound: kickDeep, label: 'D' },
-        { key: 'f', sound: kickLow, label: 'F' },
-        { key: 'g', sound: kickDeep, label: 'G' },
-        { key: 'h', sound: kickLow, label: 'H' },
-        { key: 'j', sound: kickDeep, label: 'J' },
-        { key: 'k', sound: kickLow, label: 'K' },
-        { key: 'l', sound: kickDeep, label: 'L' },
+        { key: 'a', sound: clap, label: 'A' },
+        { key: 's', sound: kick, label: 'S' },
+        { key: 'd', sound: kick2, label: 'D' },
+        { key: 'f', sound: hihat, label: 'F' },
+        { key: 'g', sound: openhat, label: 'G' },
+        { key: 'h', sound: perc, label: 'H' },
+        { key: 'j', sound: snare, label: 'J' },
+        { key: 'k', sound: tom, label: 'K' },
+        { key: 'l', sound: crash, label: 'L' },
 
     ];
 
