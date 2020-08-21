@@ -25,9 +25,10 @@ Syntax highlighted code block
 - ermöglichen Logik in functional Components
 
 #Higher-Order-Components -> _Sellee-Root-Statehandler_
+
 #render-props -> _React Router_
 
-Ohne Hooks
+**Ohne Hooks**
 ```
 class Button extends React.Components{
     constructor() {
@@ -43,8 +44,8 @@ class Button extends React.Components{
 }
 ```
 
-Mit Hooks
-```
+**Mit Hooks**
+```markdown
 function Button(){
     const [count, setCount] = useState(0);
 
@@ -72,6 +73,8 @@ function Button(){
 ### useState
 **IN**
 ```
+import React, { useState } from 'react';
+
 const [count, setCount] = useState(0);
 setCount(count + 1);
 ```
