@@ -21,7 +21,14 @@ Syntax highlighted code block
 
 ## What are Hooks
 
+### Essentials
+- Only functional Components
+- Same order on each rendering
+
 ## Differences
+- useState
+- useEffect
+- useRef
 
 ## Example Project
 
@@ -30,6 +37,10 @@ _Base Repo_
 
 ## Whats next
 
-- Use different SoundFiles / Instruments
+- Write AI for AutoTune
 - Animations
 - Save Input for a loop
+
+TODO
+- Hooks react to Events
+- Component for State_Calls bool, string, int
