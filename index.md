@@ -21,7 +21,11 @@ Syntax highlighted code block
 
 ## Was sind _HOOKS_
 
+- ab React 16.8 (Komplett Opt-In)
 - ermöglichen Logik in functional Components
+
+#Higher-Order-Components -> _Sellee-Root-Statehandler_
+#render-props -> _React Router_
 
 Ohne Hooks
 ```
