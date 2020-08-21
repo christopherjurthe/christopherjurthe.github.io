@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Keybox from '../Keybox/Keybox';
 
 import clap from '../../assets/drums/clap-808.wav';
@@ -26,20 +26,12 @@ function Band() {
         { key: 'l', sound: crash, label: 'L' },
     ];
 
-    function downHandler({ key }) {
-
-    }
-    function upHandler() {
-
-    }
-
     /* EventListeners */
-
 
     const drums = drumsMapping.map(
         item => (
             <Keybox
-
+                key={item.key}
             />
         )
     );
