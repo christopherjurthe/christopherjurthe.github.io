@@ -14,7 +14,7 @@ function App() {
             <div className="main">
 
                 <Hooks />
-                {/* <Band /> */}
+                <Band />
             </div>
             <div className="footer">
                 <Footer></Footer>
