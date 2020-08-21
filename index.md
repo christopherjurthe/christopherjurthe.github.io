@@ -124,18 +124,48 @@ if(loading){
 ### useRef
 **IN**
 ```
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 
-const [count, setCount] = useState(0);
-const clickhandler = () => {
-    setCount(count+1);
+const inputEl = useRef(null);
+const onButtonClick = () => {    
+    inputEl.current.focus();
+  };
+```
+
+**OUT**
+```
+<>
+    <input ref={inputEl} type="text" />
+    <button onClick={onButtonClick}>Focus the input</button>
+</>
+```
+
+__But wait, there's more__
+
+mutable Objects:
+**IN**
+```
+import React, { useRef } from 'react';
+
+const intervalref = useRef();
+useEffect(() => {
+    const id = setInterval(() => {
+      // ...
+    });
+    intervalRef.current = id;   
+});
+
+function handleCancelClick() {
+    clearInterval(intervalRef.current);
 }
 ```
 
 **OUT**
 ```
-<button onClick={() => clickhandler}>Click Me</button>
-<p>You clicked {count} times</p>
+<>
+    <input ref={inputEl} type="text" />
+    <button onClick={onButtonClick}>Focus the input</button>
+</>
 ```
 
 ### Other Hooks
