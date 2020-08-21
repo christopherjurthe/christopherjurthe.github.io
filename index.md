@@ -19,23 +19,40 @@ Syntax highlighted code block
 
 # Phil Collins doing React Hooks
 
-## What are Hooks
+## Was sind _HOOKS_
 
-- bring logic to functional Components
+- ermöglichen Logik in functional Components
 
-````
-TEST
-````
-
+Ohne Hooks
 ```
-TEST
+class Button extends React.Components{
+    constructor() {
+        this.state = { count: 0 }
+    }
+
+    clickhandler(){
+        const {count} = this.state;
+        this.setState({
+            count: count+1 
+        })
+    }
+}
 ```
 
-```TEST```
+Mit Hooks
+```
+function Button(){
+    const [count, setCount] = useState(0);
+
+    function clickhandler(){
+        setCount(count+1);
+    }
+}
+```
 
 ### Essentials
-- Only functional Components
-- Same order on each rendering
+- Nur für functional Components
+- Reihenfolge der setState's muss in jedem rendering identisch sein
 
 ## Differences
 - useState
