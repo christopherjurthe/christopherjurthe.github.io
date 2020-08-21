@@ -53,15 +53,34 @@ function Button(){
     }
 }
 ```
-
-### Essentials
-- Nur für functional Components
-- Reihenfolge der setState's muss in jedem rendering identisch sein
-
-## Differences
+### Heute
 - useState
 - useEffect
 - useRef
+
+### _Hausaufgabe_
+- useMemo
+- useContext
+- useCallback
+- useReducer
+
+
+### Essentials
+- Nur für functional Components
+- Reihenfolge der setState's muss in jedem rendering identisch sein (Top Level)
+
+### useState
+**IN**
+```
+const [count, setCount] = useState(0);
+setCount(count + 1);
+```
+
+**OUT**
+```
+<p>You clicked {count} times</p>
+```
+
 
 ## Example Project
 
