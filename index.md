@@ -60,10 +60,7 @@ function Button(){
 - useEffect
 - useRef
 
-## _Hausaufgabe_
-- useContext
-- useMemo / useCallback
-- useReducer
+
 
 
 ### Essentials
@@ -142,6 +139,11 @@ const clickhandler = () => {
 ```
 
 ### Other Hooks
+**_Hausaufgabe_**
+- useContext
+- useMemo / useCallback
+- useReducer
+
 **useContext** GlobalStateMgmt
 ```
 //CartContext.js
@@ -200,6 +202,3 @@ _Base Repo_
 - Animations
 - Save Input for a loop
 
-TODO
-- Hooks react to Events
-- Component for State_Calls bool, string, int
