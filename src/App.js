@@ -12,7 +12,6 @@ function App() {
                 <Header></Header>
             </div>
             <div className="main">
-
                 <Hooks />
                 <Band />
             </div>
