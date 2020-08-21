@@ -45,7 +45,7 @@ class Button extends React.Components{
 ```
 
 **Mit Hooks**
-```markdown
+```
 function Button(){
     const [count, setCount] = useState(0);
 
@@ -53,13 +53,14 @@ function Button(){
         setCount(count+1);
     }
 }
+
 ```
-### Heute
+### TOPs
 - useState
 - useEffect
 - useRef
 
-### _Hausaufgabe_
+## _Hausaufgabe_
 - useMemo
 - useContext
 - useCallback
@@ -67,8 +68,61 @@ function Button(){
 
 
 ### Essentials
-- Nur für functional Components
-- Reihenfolge der setState's muss in jedem rendering identisch sein (Top Level)
+1. Nur für functional Components
+2. Reihenfolge der setState's muss in jedem rendering identisch sein (Top Level)
+
+### useState 
+__this.setState({});__
+**IN**
+```
+import React, { useState } from 'react';
+
+const [count, setCount] = useState(0);
+setCount(count + 1);
+```
+
+**OUT**
+```
+<p>You clicked {count} times</p>
+```
+
+### useEffect
+__componentDid[Mount,Update,..]()__
+**IN**
+```
+
+__________
+import React, { useState, useEffect } from 'react';
+
+const [users, setUsers] = useState([]);
+const [loading, setLoading] = useState(false);
+
+useEffect(() => {
+    fetch('http://ourapi.com/v1/users')
+    .then(response => setUsers(response.json()))
+
+    //optional
+    return () => {
+        //do stuff after unmounting
+    }
+});
+
+useEffect(()=>{foo()},[]);
+useEffect(()=>{foo()},[stateValue])
+```
+
+**OUT**
+```
+if(loading){
+    return (<p>Loading</p>)
+} else {
+    return (
+        <ul>
+        {users.map(user => <li>user.name</li>)}
+        </ul>     
+    )
+}
+```
 
 ### useState
 **IN**
