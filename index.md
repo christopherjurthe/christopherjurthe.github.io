@@ -1,12 +1,16 @@
-# 52 Webinar 21.08.2020
+# 53Webinar [21.08.2020]
 
 **Interaktive Teilnahme erwünscht :* **
+
 
 # Topic
 ________
 # Phil Collins doing React Hooks
+________
+
 
 ## Was sind _HOOKS_
+
 
 - ab React 16.8 (Komplett Opt-In)
 - ermöglichen Logik in functional Components
