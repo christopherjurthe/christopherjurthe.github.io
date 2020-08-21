@@ -61,9 +61,8 @@ function Button(){
 - useRef
 
 ## _Hausaufgabe_
-- useMemo
 - useContext
-- useCallback
+- useMemo / useCallback
 - useReducer
 
 
@@ -83,6 +82,7 @@ setCount(count + 1);
 
 **OUT**
 ```
+<button onClick={() => clickhandler}>Click Me</button>
 <p>You clicked {count} times</p>
 ```
 
@@ -124,20 +124,70 @@ if(loading){
 }
 ```
 
-### useState
+### useRef
 **IN**
 ```
 import React, { useState } from 'react';
 
 const [count, setCount] = useState(0);
-setCount(count + 1);
+const clickhandler = () => {
+    setCount(count+1);
+}
 ```
 
 **OUT**
 ```
+<button onClick={() => clickhandler}>Click Me</button>
 <p>You clicked {count} times</p>
 ```
 
+### Other Hooks
+**useContext** GlobalStateMgmt
+```
+//CartContext.js
+    export const CartContext = React.createContext(
+        { showCart:false, toggleCart: () => {}, }
+    );
+
+//Cart.js
+   const [showCart, setShowCart] = useState(false);
+
+  const toggleCart = () => {
+    setShowCart(!showCart);
+  };
+
+  return(
+    <CartContext.Provider value={{ showCart, toggleCart }}>
+        <section>
+            <CartDrawer show={showCart} selectedCartItems={selectedCartItems} />
+        </section>
+    </CartContext.Provider>
+  );
+
+//Article.js
+import CartContext from 'CartContext.js'
+export const Article () => {
+    const cart = useContext(CartContext);
+    const addToCart = async () => {
+        if (true) {
+            cart.toggleCart();
+        }
+    };
+
+    return (
+        <button onCLick={addToCart}>Add Item to Cart</button>
+    )
+}
+
+<Shop>
+    <Header>
+        <Cart/>
+    </Header>
+    <Main>
+        <Category>
+            <Article>
+        ...
+```
 
 ## Example Project
 
