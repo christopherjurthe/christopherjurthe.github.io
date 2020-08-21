@@ -13,8 +13,8 @@ function App() {
             </div>
             <div className="main">
 
-                {/* <Hooks /> */}
-                <Band />
+                <Hooks />
+                {/* <Band /> */}
             </div>
             <div className="footer">
                 <Footer></Footer>
